@@ -14,7 +14,7 @@ import { FiCheck, FiPlay, FiX } from "react-icons/fi";
 export default function DebugInfo({ data }) {
   console.log(data);
   return (
-    <Stack>
+    <Stack w={"300"}>
       <Group>
         <Text size="lg" fw={700} c={"red"}>
           Error at line {data[0].line}
@@ -36,7 +36,9 @@ export default function DebugInfo({ data }) {
         <Text size="lg" fw={700} c={"green"}>
           Learn:
         </Text>
-        <Text>{data[0].online_resource}</Text>
+        <Text style={{ wordBreak: "break-all" }}>
+          {data[0].online_resource}
+        </Text>
       </Group>
     </Stack>
   );

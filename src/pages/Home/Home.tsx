@@ -31,8 +31,8 @@ export default function Home() {
       {imgFiles ? (
         <Stack>
           <Image
-            // h={500}
-            // w={"auto"}
+            // h={"100"}
+            // w={"100%"}
             src={URL.createObjectURL(imgFiles[0])}
             onLoad={() => {
               URL.revokeObjectURL(URL.revokeObjectURL(imgFiles[0]));
